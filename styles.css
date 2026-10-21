@@ -517,3 +517,29 @@ Finalmente, vamos a ajustar la navegación, el título y los espacios para que e
         font-size: 1.9rem;
     }
 }
+/* Fondo tecnológico para la sección de inicio */
+#inicio {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            rgba(36, 0, 47, 0.78),
+            rgba(36, 0, 47, 0.92)
+        ),
+        url("img/fondo-tech.jpg") center / cover no-repeat;
+}
+
+/* Brillo decorativo neón */
+#inicio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(32, 245, 197, 0.12),
+        transparent 65%
+    );
+    pointer-events: none;
+    z-index: -1;
+}

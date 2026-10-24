@@ -457,7 +457,7 @@ Finalmente, vamos a ajustar la navegación, el título y los espacios para que e
    ========================================= */
 
 /* Ajustes para móviles y pantallas estrechas. */
-@media (max-width: 700px) {
+@media (max-width: 100px) {
 
     /* Reduce los espacios del encabezado. */
     header {

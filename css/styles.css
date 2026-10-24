@@ -717,17 +717,17 @@ Finalmente, vamos a ajustar la navegación, el título y los espacios para que e
                 color 0.25s ease;
 }
 
-#btn--usuario:hover {
+#btn-recargar-usuario:hover {
     background: var(--neon);
     color: var(--fondo);
 }
 
-#btn--usuario:focus-visible {
+#btn-recargar-usuario:focus-visible {
     outline: 2px solid var(--neon-suave);
     outline-offset: 4px;
 }
 
-#btn--usuario:disabled {
+#btn-recargar-usuario {
     opacity: 0.6;
     cursor: wait;
 }
@@ -799,7 +799,7 @@ Finalmente, vamos a ajustar la navegación, el título y los espacios para que e
     color: #ffb4c0;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 100px) {
     .api-panel {
         padding: 16px;
     }

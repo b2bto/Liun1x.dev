@@ -524,7 +524,7 @@ Finalmente, vamos a ajustar la navegación, el título y los espacios para que e
     overflow: hidden;
     background:
         linear-gradient(
-            rgba(36, 0, 47, 0.78),
+            rgba(47, 14, 0, 0.78),
             rgba(36, 0, 47, 0.92)
         ),
         url("img/fondo-tech.jpg") center / cover no-repeat;

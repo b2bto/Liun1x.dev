@@ -1,6 +1,5 @@
-/* =========================================
-   1. CONFIGURACIÓN GENERAL
-   ========================================= */
+/* TALLER DISEÑO CON CSS */
+/* CONFIGURACIÓN GENERAL CSS LIUN!X.DEV*/
 
 /* Importamos una fuente para los titulos
    y otra fuente para los parrafos. */
@@ -643,4 +642,181 @@ Finalmente, vamos a ajustar la navegación, el título y los espacios para que e
 
 .habilidad-card:hover .tecnologia-icono {
     transform: translateY(-4px) scale(1.08);
+}
+
+/*   10. TALLER: CONSUMO DE API REST */
+
+#usuarios-api {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+        linear-gradient(
+            rgba(36, 0, 47, 0.88),
+            rgba(36, 0, 47, 0.96)
+        ),
+        url("/img/fondo-tech.jpg") center / cover no-repeat;
+}
+
+/* Panel principal de la API */
+.api-panel {
+    margin-top: 28px;
+    padding: 22px;
+    background: rgba(36, 0, 47, 0.75);
+    border: 1px solid var(--neon);
+    border-radius: 8px;
+    min-width: 0;
+}
+
+/* Encabezado inspirado en una terminal */
+.api-encabezado {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(32, 245, 197, 0.35);
+    color: var(--neon);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    overflow-wrap: anywhere;
+}
+
+.api-indicador {
+    width: 10px;
+    height: 10px;
+    flex-shrink: 0;
+    background: var(--neon);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--neon);
+}
+
+/* Contador y botón de recarga */
+.api-resumen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 20px 0;
+}
+
+.api-resumen strong {
+    color: var(--neon);
+}
+
+#btn-recargar-usuario {
+    padding: 10px 16px;
+    background: transparent;
+    color: var(--neon);
+    border: 1px solid var(--neon);
+    border-radius: 4px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.25s ease,
+                color 0.25s ease;
+}
+
+#btn--usuario:hover {
+    background: var(--neon);
+    color: var(--fondo);
+}
+
+#btn--usuario:focus-visible {
+    outline: 2px solid var(--neon-suave);
+    outline-offset: 4px;
+}
+
+#btn--usuario:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* Cuadrícula adaptable de usuarios */
+.usuarios-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 230px), 1fr)
+    );
+    gap: 18px;
+}
+
+/* Tarjeta de cada usuario */
+.usuario-card {
+    min-width: 0;
+    padding: 20px;
+    background: rgba(68, 0, 90, 0.8);
+    border: 1px solid rgba(32, 245, 197, 0.55);
+    border-radius: 6px;
+    overflow-wrap: anywhere;
+    transition: transform 0.25s ease,
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.usuario-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--neon);
+    box-shadow: 0 0 16px rgba(32, 245, 197, 0.15);
+}
+
+.usuario-numero {
+    display: inline-block;
+    margin-bottom: 14px;
+    padding: 4px 9px;
+    color: var(--neon);
+    border: 1px solid rgba(32, 245, 197, 0.45);
+    border-radius: 3px;
+    font-size: 0.8rem;
+}
+
+.usuario-card h3 {
+    margin-bottom: 14px;
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+.usuario-card p {
+    margin-top: 9px;
+    color: var(--texto-secundario);
+    font-size: 1rem;
+}
+
+.usuario-card strong {
+    color: var(--neon-suave);
+}
+
+/* Mensajes de carga y error */
+.api-mensaje {
+    grid-column: 1 / -1;
+    padding: 24px 12px;
+    color: var(--texto-secundario);
+    text-align: center;
+}
+
+.api-error {
+    color: #ffb4c0;
+}
+
+@media (max-width: 700px) {
+    .api-panel {
+        padding: 16px;
+    }
+
+    .api-resumen {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    #btn--usuario {
+        width: 100%;
+    }
+
+    .usuarios-grid {
+        grid-template-columns: 1fr;
+    }
+}
+#estado.error {
+    color: #ffb4c0;
 }

@@ -8,7 +8,7 @@
     <title>Liun1x.dev | Portafolio WEB</title>
 
     <!-- Esta sera la conexion con la hoja de estilo -->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -96,8 +96,7 @@
                     <h3>Mi portafolio web</h3>
 
                     <p>
-                        Sitio web personal desarrollado con HTML y CSS
-                        para presentar mi perfil, mis intereses y mis proyectos.
+                        Sitio web personal desarrollado con HTML y CSS para presentar mi perfil, organizar mis proyectos y documentar mi proceso de aprendizaje.
                     </p>
 
                     <p>
@@ -124,8 +123,7 @@
                     <h3>Automatización con Python</h3>
 
                     <p>
-                        Programas y ejercicios para automatizar tareas
-                        y explorar las posibilidades de Python.
+                        Desarrollo de herramientas para automatizar tareas, procesar información y generar informes, aplicando Python a problemas prácticos.
                     </p>
 
                     <p>
@@ -150,8 +148,7 @@
                     <h3>Proyecto Linux</h3>
 
                     <p>
-                        Un espacio para documentar comandos, scripts,
-                        configuraciones y experimentos con sistemas Linux.
+                        Exploración y personalización del entorno AwesomeWM mediante configuraciones, atajos de teclado, scripts y herramientas de terminal.
                     </p>
 
                     <p>
@@ -159,6 +156,29 @@
                     </p>
 
                     <a href="https://github.com/b2bto/Awesome-WM.git">
+                        Ver código en GitHub →
+                    </a>
+                </article>
+
+                <!-- Cuarta tarjeta proyecto en REACT -->
+                <article class="proyecto-card">
+                    <img
+                        class="proyecto-imagen"
+                        src="img/App-jsx.png"
+                        alt="Vista previa de mi portafolio web actualizado en reac"
+                        loading="lazy"
+                    >
+                    <h3>Desarrollo web con React</h3>
+
+                    <p>
+                        Desarrollo de interfaces web con componentes reutilizables, explorando la organización del código, la gestión de la interfaz y la creación de aplicaciones dinámicas.
+                    </p>
+
+                    <p>
+                        <strong>Tecnologías:</strong> Linux y Bash.
+                    </p>
+
+                    <a href="https://github.com/b2bto/Liun1x.dev-react.git">
                         Ver código en GitHub →
                     </a>
                 </article>
@@ -222,17 +242,17 @@
                 <div class="habilidades-grid">
                     <article class="habilidad-card">
                         <h4>HTML5</h4>
-                        <p>Estructuración y organización del contenido web.</p>
+                        <p>Estructuración y organización semántica del contenido web.</p>
                     </article>
 
                     <article class="habilidad-card">
                         <h4>CSS3</h4>
-                        <p>Estilos, diseño visual y maquetación de páginas web.</p>
+                        <p>Estilos, diseño visual y maquetación de interfaces.</p>
                     </article>
 
                     <article class="habilidad-card">
                         <h4>JavaScript</h4>
-                        <p>Fundamentos de programación e interactividad web.</p>
+                        <p>Fundamentos, manipulación del DOM y consumo de API REST.</p>
                     </article>
 
                     <article class="habilidad-card">
@@ -249,17 +269,17 @@
                 <div class="habilidades-grid">
                     <article class="habilidad-card">
                         <h4>Python</h4>
-                        <p>Conocimientos básicos de programación y automatización.</p>
+                        <p>Automatización de tareas y desarrollo de scripts.</p>
                     </article>
 
                     <article class="habilidad-card">
                         <h4>Java</h4>
-                        <p>Conocimientos de los fundamentos del lenguaje.</p>
+                        <p>Exploración de los fundamentos de programación orientada a objetos.</p>
                     </article>
 
                     <article class="habilidad-card">
                         <h4>Bash</h4>
-                        <p>Scripts, comandos y automatización en entornos Linux.</p>
+                        <p>Uso de comandos y creación de scripts para Linux.</p>
                     </article>
                 </div>
             </div>
@@ -271,7 +291,7 @@
                 <div class="habilidades-grid">
                     <article class="habilidad-card">
                         <h4>Linux</h4>
-                        <p>Manejo del sistema, terminal y comandos de consola.</p>
+                        <p>Administración básica del sistema y personalización del entorno.</p>
                     </article>
 
                     <article class="habilidad-card">
@@ -320,20 +340,51 @@
         </section>
 
          <!-- Formulario para  los visitantes puedan escribirme un mensaje -->
-        <section id="contacto">
+        <section id="contacto" class="seccion">
             <h2>Contacto</h2>
-            <form action="">
-                <!-- Campo para ingresar el nombre -->
-                <input type="text" placeholder="Nombre" required>
 
-                <!-- Campo para ingresar un correo valido -->
-                <input type="email" placeholder="Email" required>
+            <p class="seccion-descripcion">
+                ¿Tienes una pregunta o quieres compartir una idea?
+                Escríbeme mediante el siguiente formulario.
+            </p>
 
-                <!-- Campo para escribir el mensaje -->
-                <textarea placeholder="Mensaje" required></textarea>
+            <form id="form-contacto">
+                <div class="campo-formulario">
+                    <label for="nombre">Nombre</label>
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Escribe tu nombre"
+                        autocomplete="name"
+                        required
+                    >
+                </div>
 
-                <!-- Boton para enviar el formulario -->
-                <button type="submit">Enviar</button>
+                <div class="campo-formulario">
+                    <label for="email">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="correo@ejemplo.com"
+                        autocomplete="email"
+                        required
+                    >
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        placeholder="Escribe tu mensaje"
+                        rows="5"
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit">Enviar mensaje</button>
             </form>
         </section>
     </main>
@@ -344,6 +395,6 @@
             &copy; Liun1x.dev. Todos los derechos reservados.
         </p>
     </footer>
-    <script src="/js/app.js" defer></script>
+    <script src="js/app.js" defer></script>
 </body>
 </html>
